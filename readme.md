@@ -1,9 +1,9 @@
 # Strava API Fun
 
 ### Data source: 
-- [Strava API] (https://developers.strava.com/)
+- [Strava API](https://developers.strava.com/)
 ### Inspiration from: 
-- [Rene's writeup] (https://towardsdatascience.com/visualize-your-strava-data-on-an-interactive-map-with-python-92c1ce69e91d)
+- [Rene's writeup](https://towardsdatascience.com/visualize-your-strava-data-on-an-interactive-map-with-python-92c1ce69e91d)
 
 ## Features
 
