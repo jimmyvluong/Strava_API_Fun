@@ -5,7 +5,7 @@ import requests
 import urllib3
 
 
-#Pandas will be the backbone of our data manipulation.
+# Pandas will be the backbone of our data manipulation.
 import pandas as pd
 from pandas.io.json import json_normalize
 
