@@ -18,3 +18,6 @@
 ## Key concepts practiced
 1. Security
 - Best practice for hiding API keys and login information
+2. Pandas data manipulation
+- GROUP BY, SUM, AGG
+    - https://stackoverflow.com/questions/39922986/how-do-i-pandas-group-by-to-get-sum
