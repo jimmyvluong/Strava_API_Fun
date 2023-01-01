@@ -15,9 +15,16 @@
 [] Tell me how many miles per each activity I have completed by month.
 [] Tell me how many more miles per each activity I need to do to achieve the next milestone.
 
+## Software Dev Features
+[] Pre-and post hooks for managing Conda environments
+
 ## Key concepts practiced
 1. Security
 - Best practice for hiding API keys and login information
 2. Pandas data manipulation
 - GROUP BY, SUM, AGG
     - https://stackoverflow.com/questions/39922986/how-do-i-pandas-group-by-to-get-sum
+
+## Goal Gear
+[] Tri-capable watch
+[] Competitive bike
