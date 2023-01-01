@@ -4,13 +4,12 @@ from config import client_id, client_secret, refresh_token
 import requests
 import urllib3
 
-
-# Pandas will be the backbone of our data manipulation.
+# import packages for data manipulation
 import pandas as pd
 from pandas.io.json import json_normalize
-
 import numpy as np
 
+# disable warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 auth_url = "https://www.strava.com/oauth/token"
@@ -52,7 +51,7 @@ activities['start_time'] = activities['start_date_local'].dt.time
 activities['start_date_local'] = activities['start_date_local'].dt.date
 activities.head(5)
 
-# For testing, only take top 3 records
+# For testing, only take top 1 record(s)
 activities = activities.query("type == 'Ride'")
 activities = activities.head(1)
 
