@@ -2,3 +2,6 @@ docs/setup_documentation.md
 scripts/test_map.ipynb
 scripts/config.py
 config.py
+
+*.pyc
+scripts/__pycache__/
