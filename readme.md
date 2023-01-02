@@ -17,6 +17,7 @@
 
 ## Software Dev Features
 [] Pre-and post hooks for managing Conda environments
+- https://stackoverflow.com/questions/52038034/push-and-pull-my-conda-environment-using-git/56787188#56787188
 
 
 ## Key concepts practiced
@@ -30,7 +31,8 @@
     - conda env export > environment.yml
 - Step 2: Create the environment from the exported file.
     - conda env create -f environment.yml
-
+4. Working with JSON data type
+- https://towardsdatascience.com/all-pandas-json-normalize-you-should-know-for-flattening-json-13eae1dfb7dd
 ## Goal Gear
 [] Tri-capable watch
 [] Competitive bike
