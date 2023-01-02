@@ -31,6 +31,13 @@
     - conda env export > environment.yml
 - Step 2: Create the environment from the exported file.
     - conda env create -f environment.yml
+- Step 3: If updating the environment and using it on another machine:
+    - conda activate myenv
+    - conda env update --file local.yml --prune
+    - ALTERNATE one line of code: conda env update --name myenv --file local.yml --prune
+    - add the `--prune` option to also uninstall packages that were removed from the environment.yml
+    - https://stackoverflow.com/questions/42352841/how-to-update-an-existing-conda-environment-with-a-yml-file
+
 4. Working with JSON data type
 - https://towardsdatascience.com/all-pandas-json-normalize-you-should-know-for-flattening-json-13eae1dfb7dd
 ## Goal Gear
