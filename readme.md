@@ -18,12 +18,18 @@
 ## Software Dev Features
 [] Pre-and post hooks for managing Conda environments
 
+
 ## Key concepts practiced
 1. Security
 - Best practice for hiding API keys and login information
 2. Pandas data manipulation
 - GROUP BY, SUM, AGG
     - https://stackoverflow.com/questions/39922986/how-do-i-pandas-group-by-to-get-sum
+3. Exporting environment.yml files for use by other developers or for other machines.
+- Step 1: Export the environment.
+    - conda env export > environment.yml
+- Step 2: Create the environment from the exported file.
+    - conda env create -f environment.yml
 
 ## Goal Gear
 [] Tri-capable watch
