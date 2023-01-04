@@ -1,1 +1,17 @@
 -r requirements.txt
+requests
+urllib3
+
+# import packages for data manipulation
+pandas as pd
+from pandas.io.json import json_normalize
+numpy as np
+
+# import modules
+os
+time
+matplotlib.pyplot as plt
+folium
+polyline
+base64
+from tqdm import tqdm
