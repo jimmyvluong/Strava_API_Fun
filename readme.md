@@ -19,7 +19,6 @@
 [] Pre-and post hooks for managing Conda environments
 - https://stackoverflow.com/questions/52038034/push-and-pull-my-conda-environment-using-git/56787188#56787188
 
-
 ## Key concepts practiced
 1. Security
 - Best practice for hiding API keys and login information
@@ -40,6 +39,13 @@
 
 4. Working with JSON data type
 - https://towardsdatascience.com/all-pandas-json-normalize-you-should-know-for-flattening-json-13eae1dfb7dd
+5. Deployment
+- https://dash.plotly.com/deployment
+6. `pip freeze` and `conda list --export` for generating requirements files for your environment
+- conda list --export > requirements.txt
+- conda create --name <envname> --file requirements.txt
+- https://stackoverflow.com/questions/41249401/difference-between-pip-freeze-and-conda-list
+
 ## Goal Gear
 [] Tri-capable watch
 [] Competitive bike
