@@ -41,7 +41,7 @@
 - https://towardsdatascience.com/all-pandas-json-normalize-you-should-know-for-flattening-json-13eae1dfb7dd
 5. Deployment
 - https://dash.plotly.com/deployment
-- Deply using Render: https://www.youtube.com/watch?v=H16dZMYmvqo
+- Deploy using Render: https://www.youtube.com/watch?v=H16dZMYmvqo
 6. `pip freeze` and `conda list --export` for generating requirements files for your environment
 - conda list --export > requirements.txt
 - conda create --name <envname> --file requirements.txt
