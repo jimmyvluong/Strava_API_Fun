@@ -2,7 +2,11 @@ import dash
 # import the layout module
 from layout.layout import layout
 
-app = dash.Dash(__name__)
+# Create the Dash app
+app = Dash()
+
+# Added line from dash render tutorial
+server = app.server
 
 # Server side
 app.layout = layout
