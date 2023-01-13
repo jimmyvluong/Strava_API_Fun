@@ -9,6 +9,8 @@
 [] Elevation profile
 [] Coaching - do more, rest more, you're doing more than usual
 [] Comparison to past performance aka "Relative Performance"
+[] Add database schema with all columns and column types
+[] Make a PostGreSQL database on Render and store the data there, instead of in DataFrames
 
 ## MVP Features
 [] Tell me how many miles per each activity I have completed.
@@ -41,11 +43,14 @@
 - https://towardsdatascience.com/all-pandas-json-normalize-you-should-know-for-flattening-json-13eae1dfb7dd
 5. Deployment
 - https://dash.plotly.com/deployment
-- https://www.youtube.com/watch?v=H16dZMYmvqo
+- Deploy using Render: https://www.youtube.com/watch?v=H16dZMYmvqo
 6. `pip freeze` and `conda list --export` for generating requirements files for your environment
 - conda list --export > requirements.txt
 - conda create --name <envname> --file requirements.txt
 - https://stackoverflow.com/questions/41249401/difference-between-pip-freeze-and-conda-list
+7. if __name__ == __main__
+- https://www.freecodecamp.org/news/if-name-main-python-example/
+- https://realpython.com/if-name-main-python/#:~:text=Nesting%20code%20under%20if%20__,defined%2C%20but%20no%20code%20executes.
 
 ## Goal Gear
 [] Tri-capable watch
