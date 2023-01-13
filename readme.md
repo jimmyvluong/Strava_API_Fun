@@ -50,3 +50,4 @@
 ## Goal Gear
 [] Tri-capable watch
 [] Competitive bike
+[] Helmet
