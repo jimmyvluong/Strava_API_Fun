@@ -11,6 +11,7 @@
 [] Comparison to past performance aka "Relative Performance"
 [] Add database schema with all columns and column types
 [] Make a PostGreSQL database on Render and store the data there, instead of in DataFrames
+[] Cadence x Power x Heartrate?
 
 ## MVP Features
 [] Tell me how many miles per each activity I have completed.
