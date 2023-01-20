@@ -11,10 +11,11 @@
 [] Comparison to past performance aka "Relative Performance"
 [] Add database schema with all columns and column types
 [] Make a PostGreSQL database on Render and store the data there, instead of in DataFrames
+[] Half-year in Review and Year in Review
 
 ## MVP Features
 [] Tell me how many miles per each activity I have completed.
-[] Tell me how many miles per each activity I have completed by month.
+[] Tell me how many miles per each activity I have completed by time (week, month, year)
 [] Tell me how many more miles per each activity I need to do to achieve the next milestone.
 
 ## Software Dev Features
@@ -56,3 +57,8 @@
 [] Tri-capable watch
 [] Competitive bike
 [] Helmet
+[] Bike computer
+
+## Goal ???
+[] Donate old ___ to someone.
+[] 
