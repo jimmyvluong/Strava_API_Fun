@@ -22,6 +22,8 @@
 ## Software Dev Features
 [] Pre-and post hooks for managing Conda environments
 - https://stackoverflow.com/questions/52038034/push-and-pull-my-conda-environment-using-git/56787188#56787188
+[] Protect my API keys by reading data from a Google spreadsheet
+[] Optional - let others use their own spreadsheet using the spreadsheet id
 
 ## Key concepts practiced
 1. Security
@@ -55,7 +57,7 @@
 - https://realpython.com/if-name-main-python/#:~:text=Nesting%20code%20under%20if%20__,defined%2C%20but%20no%20code%20executes.
 
 ## Goal Gear
-[] Tri-capable watch
+[x] Tri-capable watch
 [] Competitive bike
 [] Helmet
 [] Bike computer
