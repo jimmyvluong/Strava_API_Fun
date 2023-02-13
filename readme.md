@@ -28,6 +28,7 @@
 ## Key concepts practiced
 1. Security
 - Best practice for hiding API keys and login information
+- https://www.freecodecamp.org/news/private-api-keys/
 2. Pandas data manipulation
 - GROUP BY, SUM, AGG
     - https://stackoverflow.com/questions/39922986/how-do-i-pandas-group-by-to-get-sum
@@ -65,3 +66,9 @@
 ## Goal ???
 [] Donate old ___ to someone.
 [] 
+
+KOR CONNECT
+https://korconnect.io/security.html
+
+RESEARCH
+https://science4performance.com/2017/05/05/strava-fitness-and-freshness/
