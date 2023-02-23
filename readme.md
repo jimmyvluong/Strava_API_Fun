@@ -72,3 +72,11 @@ https://korconnect.io/security.html
 
 RESEARCH
 https://science4performance.com/2017/05/05/strava-fitness-and-freshness/
+
+### Thoughts - what do I want to know?
+- Total mileage per month
+- Spread of distances over time?
+- How do I replace Strava premium for the features that I want?
+- What is my "easy" running pace?
+- *Look at preparation up to the half-marathon*
+- *Could set weekly time running goals and/or weekly running mileage goals.* Did I actually stick to the plan?
