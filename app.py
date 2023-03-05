@@ -1,7 +1,9 @@
 # Import libraries
 from dash import Dash, html #, dcc, Input, Output
+import sys
 # import the layout module
-#from layout.layout import layout
+sys.path.append(".") # Adds higher directory to python modules path.
+from layout import layout
 
 # Create the Dash app
 app = Dash()
@@ -10,10 +12,7 @@ app = Dash()
 server = app.server
 
 # Server side
-# app.layout = layout
-app.layout = html.Div(children=[
-    html.H1(children='Sample Dashboard')
-])
+app.layout = layout.strava_layout
 
 # Run local server
 if __name__ == "__main__":

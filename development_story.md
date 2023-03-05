@@ -4,3 +4,5 @@
 - I could be ready to "go live" with the data in plots with Render, but I am wary of exposing my Strava API keys to people using DevTools.
 3. February 2023
 - I consulted my software development friend and she suggested reading the data from a Google spreadsheet. This is an interesting idea to pursue. Maybe this opens up the possibility that other people could use their own Google spreadsheets with the project by simply exporting their Strava data from the website.
+4. March 2023
+- A friend of mine suggested I write some user stories for this app. I decided to write a user story for myself and include it in a "Data Project Template".
