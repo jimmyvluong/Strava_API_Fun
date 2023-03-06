@@ -30,7 +30,7 @@ import pandas as pd
 from pandas.io.json import json_normalize
 import numpy as np
 
-# LOGO_LINK = "https://images.unsplash.com/photo-1501949997128-2fdb9f6428f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+LOGO_LINK = "https://images.unsplash.com/photo-1524646349956-1590eacfa324?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
 
 # Get the time last updated
 time_updated_PST = datetime.datetime.now()
@@ -47,7 +47,7 @@ strava_layout = html.Div(
     [
 
         # Set the new white-text image.
-        # html.Img(src=LOGO_LINK, style={"width": "587px", "height": "391px"}),
+        html.Img(src=LOGO_LINK, style={"width": "587px", "height": "391px"}),
         html.H1("Strava API Project"),
         # Add the time last updated.
         html.H3("Last updated: " + time_updated_PST.strftime("%B %d %Y at %H:%M PST")),
