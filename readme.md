@@ -13,6 +13,7 @@
 [] Make a PostGreSQL database on Render and store the data there, instead of in DataFrames
 [] Half-year in Review and Year in Review
 [] Cadence x Power x Heartrate?
+[] Using Dash themes
 
 ## MVP Features
 [] Tell me how many miles per each activity I have completed.
@@ -56,12 +57,17 @@
 7. if __name__ == __main__
 - https://www.freecodecamp.org/news/if-name-main-python-example/
 - https://realpython.com/if-name-main-python/#:~:text=Nesting%20code%20under%20if%20__,defined%2C%20but%20no%20code%20executes.
+8. Dash themes
+- https://towardsdatascience.com/3-easy-ways-to-make-your-dash-application-look-better-3e4cfefaf772#:~:text=There%20are%20a%20range%20of,%2C%20VAPOR%2C%20YETI%2C%20ZEPHYR.
+- https://pypi.org/project/dash-bootstrap-templates/
+
 
 ## Goal Gear
 [x] Tri-capable watch
 [] Competitive bike
 [] Helmet
 [] Bike computer
+[] Daily trainer shoes #3
 
 ## Goal ???
 [] Donate old ___ to someone.
@@ -80,3 +86,4 @@ https://science4performance.com/2017/05/05/strava-fitness-and-freshness/
 - What is my "easy" running pace?
 - *Look at preparation up to the half-marathon*
 - *Could set weekly time running goals and/or weekly running mileage goals.* Did I actually stick to the plan?
+- hard, hard, easy patterns? Does my training mirror this? What is a hard week? Pace, mileage, heartrate? https://www.outsideonline.com/health/running/training-advice/science/big-data-reveals-new-marathon-training-approaches/
