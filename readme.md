@@ -60,6 +60,8 @@
 8. Dash themes
 - https://towardsdatascience.com/3-easy-ways-to-make-your-dash-application-look-better-3e4cfefaf772#:~:text=There%20are%20a%20range%20of,%2C%20VAPOR%2C%20YETI%2C%20ZEPHYR.
 - https://pypi.org/project/dash-bootstrap-templates/
+9. PIP versus CONDA for installing packages
+- https://stackoverflow.com/questions/20994716/what-is-the-difference-between-pip-and-conda#:~:text=It's%20fully%20recommended%20to%20use,perfectly%20acceptable%20to%20use%20pip.
 
 
 ## Goal Gear
@@ -86,4 +88,4 @@ https://science4performance.com/2017/05/05/strava-fitness-and-freshness/
 - What is my "easy" running pace?
 - *Look at preparation up to the half-marathon*
 - *Could set weekly time running goals and/or weekly running mileage goals.* Did I actually stick to the plan?
-- hard, hard, easy patterns? Does my training mirror this? What is a hard week? Pace, mileage, heartrate? https://www.outsideonline.com/health/running/training-advice/science/big-data-reveals-new-marathon-training-approaches/
+- hard, hard, easy patterns? Does my training mirror this? What is a hard week? Pace, mileage, heartrate, average heartrate could label a week by difficulty? https://www.outsideonline.com/health/running/training-advice/science/big-data-reveals-new-marathon-training-approaches/

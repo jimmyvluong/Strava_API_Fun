@@ -85,7 +85,7 @@ print(time_updated_PST)
 # build graphs here
 
 fig1 = px.box(
-    activities_copy, x = "Distance (Miles)", 
+    activities_copy, x = "distance", 
     title="1. Boxplot: Distance by Activity Type", 
     color="sport_type", 
     points="all"

@@ -6,6 +6,7 @@ from dash_bootstrap_templates import load_figure_template
 import sys
 # import the layout module
 sys.path.append(".") # Adds higher directory to python modules path.
+load_figure_template('DARKLY')
 from layout import layout
 
 # Create the Dash app
