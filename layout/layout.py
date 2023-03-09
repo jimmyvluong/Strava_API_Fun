@@ -100,7 +100,21 @@ print(time_updated_PST)
 
 fig1 = px.box(
     activities_run, x = "distance", 
-    title = "1. Boxplot: Distribution of Training Distance", 
+    title = "1. Boxplot: Distribution of Running Distance per Activity", 
+    # color = "sport_type", 
+    points = "all"
+)
+
+fig2 = px.box(
+    activities_swim, x = "distance", 
+    title = "2. Boxplot: Distribution of Swimming Distance per Activity", 
+    # color = "sport_type", 
+    points = "all"
+)
+
+fig3 = px.box(
+    activities_bike, x = "distance", 
+    title = "3. Boxplot: Distribution of Biking Distance per Activity", 
     # color = "sport_type", 
     points = "all"
 )
@@ -130,6 +144,18 @@ strava_layout = html.Div(
                 style={"width": "1000px", "height": "700px", "margin": "auto"},
             )
         ),
+        html.Div(
+            dcc.Graph(
+                figure=fig2,
+                style={"width": "1000px", "height": "700px", "margin": "auto"},
+            )
+        ),
+        html.Div(
+            dcc.Graph(
+                figure=fig3,
+                style={"width": "1000px", "height": "700px", "margin": "auto"},
+            )
+        ),                
         html.Br(),
         html.Span(
             children=[

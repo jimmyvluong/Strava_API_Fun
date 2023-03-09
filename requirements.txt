@@ -3,15 +3,25 @@ requests
 urllib3
 
 # import packages for data manipulation
-pandas as pd
-from pandas.io.json import json_normalize
-numpy as np
+pandas
+# from pandas.io.json import json_normalize
+pandas.io.json
+numpy
 
-# import modules
+# import standard modules
 os
 time
-matplotlib.pyplot as plt
+sys
+
+# plotly modules
+plotly.express
+
+# dash modules
+dash
+
+# mapping modules
+matplotlib.pyplot
 folium
 polyline
 base64
-from tqdm import tqdm
+tqdm
