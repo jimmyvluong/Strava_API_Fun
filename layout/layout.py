@@ -74,6 +74,13 @@ activities_copy.loc[:, 'max_speed'] *= 2.23693629 # convert from meters/second t
 # set index
 activities_copy.set_index('start_date_local', inplace=True)
 
+# separate out by sport here
+# run
+activities_run = activities_copy.query("type == 'Run'")
+# swim
+activities_swim = activities_copy.query("type == 'Swim'")
+# bike
+activities_bike = activities_copy.query("type == 'Ride'")
 #############################################################################################
 header_img_link = "https://images.unsplash.com/photo-1524646349956-1590eacfa324?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
 
@@ -84,11 +91,18 @@ print(time_updated_PST)
 #############################################################################################
 # build graphs here
 
+# fig1 = px.box(
+#     activities_copy, x = "distance", 
+#     title="1. Boxplot: Distance by Activity Type", 
+#     color="sport_type", 
+#     points="all"
+# )
+
 fig1 = px.box(
-    activities_copy, x = "distance", 
-    title="1. Boxplot: Distance by Activity Type", 
-    color="sport_type", 
-    points="all"
+    activities_run, x = "distance", 
+    title = "1. Boxplot: Distribution of Training Distance", 
+    # color = "sport_type", 
+    points = "all"
 )
 
 #############################################################################################
