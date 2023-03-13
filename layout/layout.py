@@ -12,6 +12,8 @@ import pandas as pd
 #from pandas.io.json import json_normalize
 import numpy as np
 
+import os
+
 # import packages for requesting data from the API
 import requests
 import urllib3
@@ -27,13 +29,22 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 #############################################################################################
 
 # create a dictionary of Strava profile access information
+# payload = {
+#     'client_id': client_id,
+#     'client_secret': client_secret,
+#     'refresh_token': refresh_token,
+#     'grant_type': "refresh_token",
+#     'f': 'json'
+# }
+
 payload = {
-    'client_id': client_id,
-    'client_secret': client_secret,
-    'refresh_token': refresh_token,
+    'client_id': os.getenv('client_id'),
+    'client_secret': os.getenv('client_secret'),
+    'refresh_token': os.getenv('refresh_token'),
     'grant_type': "refresh_token",
     'f': 'json'
 }
+
 
 #############################################################################################
 

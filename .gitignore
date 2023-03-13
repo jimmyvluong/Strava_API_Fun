@@ -6,3 +6,4 @@ config.py
 *.pyc
 scripts/__pycache__/
 .env
+*.env
