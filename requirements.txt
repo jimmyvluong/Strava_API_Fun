@@ -5,7 +5,7 @@ urllib3
 # import packages for data manipulation
 pandas
 # from pandas.io.json import json_normalize
-pandas.io.json
+#pandas.io.json
 numpy
 
 # import standard modules
