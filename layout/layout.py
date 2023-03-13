@@ -16,8 +16,9 @@ import numpy as np
 import requests
 import urllib3
 
-# import secrets and tokens from config.py'
-from scripts.config import client_id, client_secret, refresh_token
+# import secrets and tokens from config.py
+#from scripts.config import client_id, client_secret, refresh_token
+from config import client_id, client_secret, refresh_token
 
 # See Github secrets: https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/GitHub-Actions-Secrets-Example-Token-Tutorial#:~:text=Go%20to%20the%20Settings%20tab,text%20secret.%20to%20the%20identifier
 
@@ -100,21 +101,21 @@ print(time_updated_PST)
 
 fig1 = px.box(
     activities_run, x = "distance", 
-    title = "1. Boxplot: Distribution of Running Distance per Activity", 
+    title = "1. Boxplot: Distribution of Running Distance per Activity in Miles", 
     # color = "sport_type", 
     points = "all"
 )
 
 fig2 = px.box(
     activities_swim, x = "distance", 
-    title = "2. Boxplot: Distribution of Swimming Distance per Activity", 
+    title = "2. Boxplot: Distribution of Swimming Distance per Activity in Miles", 
     # color = "sport_type", 
     points = "all"
 )
 
 fig3 = px.box(
     activities_bike, x = "distance", 
-    title = "3. Boxplot: Distribution of Biking Distance per Activity", 
+    title = "3. Boxplot: Distribution of Biking Distance per Activity in Miles", 
     # color = "sport_type", 
     points = "all"
 )
