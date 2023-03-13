@@ -6,3 +6,4 @@
 - I consulted my software development friend and she suggested reading the data from a Google spreadsheet. This is an interesting idea to pursue. Maybe this opens up the possibility that other people could use their own Google spreadsheets with the project by simply exporting their Strava data from the website.
 4. March 2023
 - A friend of mine suggested I write some user stories for this app. I decided to write a user story for myself and include it in a "Data Project Template".
+- Tried to use config.py as a secret file to pull keys from. Did not work. Next step is to use environment variables.

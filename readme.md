@@ -30,6 +30,8 @@
 1. Security
 - Best practice for hiding API keys and login information
 - https://www.freecodecamp.org/news/private-api-keys/
+- environment variables
+- https://savelev.medium.com/best-practice-how-to-store-secrets-and-settings-in-python-project-e3ee45b3094c
 2. Pandas data manipulation
 - GROUP BY, SUM, AGG
     - https://stackoverflow.com/questions/39922986/how-do-i-pandas-group-by-to-get-sum
