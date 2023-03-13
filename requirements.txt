@@ -30,3 +30,6 @@ polyline
 # base64 install did not work
 #base64
 tqdm
+
+# gunicorn
+gunicorn
