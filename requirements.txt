@@ -23,7 +23,8 @@ dash-bootstrap-templates
 
 
 # mapping modules
-matplotlib.pyplot
+#matplotlib.pyplot
+matplotlib
 folium
 polyline
 base64
