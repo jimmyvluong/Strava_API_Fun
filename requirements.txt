@@ -9,7 +9,7 @@ pandas
 numpy
 
 # import standard modules
-os
+#os
 time
 sys
 
