@@ -91,3 +91,4 @@ https://science4performance.com/2017/05/05/strava-fitness-and-freshness/
 - *Look at preparation up to the half-marathon*
 - *Could set weekly time running goals and/or weekly running mileage goals.* Did I actually stick to the plan?
 - hard, hard, easy patterns? Does my training mirror this? What is a hard week? Pace, mileage, heartrate, average heartrate could label a week by difficulty? https://www.outsideonline.com/health/running/training-advice/science/big-data-reveals-new-marathon-training-approaches/
+- Heat map for a grupetto

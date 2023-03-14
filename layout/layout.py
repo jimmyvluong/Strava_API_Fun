@@ -18,10 +18,6 @@ import os
 import requests
 import urllib3
 
-# import secrets and tokens from config.py
-#from scripts.config import client_id, client_secret, refresh_token
-# from config import client_id, client_secret, refresh_token
-
 # See Github secrets: https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/GitHub-Actions-Secrets-Example-Token-Tutorial#:~:text=Go%20to%20the%20Settings%20tab,text%20secret.%20to%20the%20identifier
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -31,6 +27,10 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # create a dictionary of Strava profile access information
 
 ## Use this version to run locally
+
+# import secrets and tokens from config.py
+#from scripts.config import client_id, client_secret, refresh_token
+
 # payload = {
 #     'client_id': client_id,
 #     'client_secret': client_secret,
