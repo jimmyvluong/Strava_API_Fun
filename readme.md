@@ -64,6 +64,8 @@
 - https://pypi.org/project/dash-bootstrap-templates/
 9. PIP versus CONDA for installing packages
 - https://stackoverflow.com/questions/20994716/what-is-the-difference-between-pip-and-conda#:~:text=It's%20fully%20recommended%20to%20use,perfectly%20acceptable%20to%20use%20pip.
+10. How developers should think about time
+- http://web.archive.org/web/20160803154621/http://www.windward.net/blogs/every-developer-know-time/#.V6IR03bP3mE
 
 
 ## Goal Gear
