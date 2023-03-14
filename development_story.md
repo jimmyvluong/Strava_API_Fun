@@ -7,3 +7,4 @@
 4. March 2023
 - A friend of mine suggested I write some user stories for this app. I decided to write a user story for myself and include it in a "Data Project Template".
 - Tried to use config.py as a secret file to pull keys from. Did not work. Next step is to use environment variables.
+- After implementing environment variables in Render, I found that the access_token wasn't available. I printed the payload's contents and found that for the key values, like client_id, I didn't need to put quotes around the key's value, like '98155'. I only need to enter 98155.

@@ -47,7 +47,6 @@ payload = {
     'grant_type': "refresh_token",
     'f': 'json'
 }
-print(payload)
 #############################################################################################
 
 # get the data in json format
