@@ -151,6 +151,15 @@ strava_layout = html.Div(
         #         style={"width": "1000px", "height": "700px", "margin": "auto"},
         #     )
         # ),
+        html.Span(
+            children=[
+                html.H4("These plots show the distances I've run, swim, and biked for every activity I'ved logged in Strava."),
+                html.Br(),
+                html.H4("The longer bike rides are more recent and with friends :) "),
+                html.Br(),
+                html.H4("More features are in the works, including mapping of activities!")
+            ]
+        ),        
         html.Div(
             dcc.Graph(
                 figure=fig1,
