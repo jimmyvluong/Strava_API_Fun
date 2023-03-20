@@ -6,19 +6,20 @@
 - [Rene's writeup](https://towardsdatascience.com/visualize-your-strava-data-on-an-interactive-map-with-python-92c1ce69e91d)
 
 ## Planned Features
-[] Elevation profile
-[] Coaching - do more, rest more, you're doing more than usual
-[] Comparison to past performance aka "Relative Performance"
-[] Add database schema with all columns and column types
-[] Make a PostGreSQL database on Render and store the data there, instead of in DataFrames
-[] Half-year in Review and Year in Review
-[] Cadence x Power x Heartrate?
-[] Using Dash themes
+- [] Elevation profile
+- [] Coaching - do more, rest more, you're doing more than usual
+- [] Comparison to past performance aka "Relative Performance"
+- [] Add database schema with all columns and column types
+- [] Make a PostGreSQL database on Render and store the data there, instead of in DataFrames
+- [] Half-year in Review and Year in Review
+- [] Cadence x Power x Heartrate?
+- [X] Using Dash themes
 
 ## MVP Features
-[] Tell me how many miles per each activity I have completed.
-[] Tell me how many miles per each activity I have completed by time (week, month, year)
-[] Tell me how many more miles per each activity I need to do to achieve the next milestone.
+- [X] Show me the distance, in miles, per each activity you've completed by type.
+- [] Tell me how many miles per each activity I have completed.
+- [] Tell me how many miles per each activity I have completed by time (week, month, year)
+- [] Tell me how many more miles per each activity I need to do to achieve the next milestone.
 
 ## Software Dev Features
 [] Pre-and post hooks for managing Conda environments
@@ -69,11 +70,11 @@
 
 
 ## Goal Gear
-[x] Tri-capable watch
-[] Competitive bike
-[] Helmet
-[] Bike computer
-[] Daily trainer shoes #3
+- [x] Tri-capable watch
+- [] Competitive bike
+- [] Better Helmet
+- [] Bike computer
+- [] Daily trainer shoes #3
 
 ## Goal ???
 [] Donate old ___ to someone.
