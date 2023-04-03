@@ -157,6 +157,7 @@ strava_layout = html.Div(
                 html.Br(),
                 html.H4("The longer bike rides are more recent and with friends :) "),
                 html.Br(),
+                html.H4("A Python script sources data using the Strava API, and Render.com handles CI and deployment for free."),                
                 html.H4("More features are in the works, including mapping of activities!"),
                 html.Br(),
                 html.H4("Github repo: https://github.com/jimmyvluong/Strava_API_Fun")
