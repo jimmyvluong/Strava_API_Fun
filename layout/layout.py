@@ -85,9 +85,17 @@ activities_copy.loc[:, 'distance'] /= 1609.344 # convert from meters to miles
 activities_copy.loc[:, 'average_speed'] *= 2.23693629 # convert from meters/second to miles/hour
 activities_copy.loc[:, 'max_speed'] *= 2.23693629 # convert from meters/second to miles/hour
 # set index
-activities_copy.set_index('start_date_local', inplace=True)
+# activities_copy.set_index('start_date_local', inplace=True)
 
-# separate out by sport here
+#############################################################################################
+# separate out by sport or group here
+# nfs team activities
+
+activities_nfs = activities_copy.query('name.str.contains("NFS")', engine ='python')
+# https://stackoverflow.com/questions/25146121/extracting-just-month-and-year-separately-from-pandas-datetime-column
+# create a column that extracts month and year from the activity
+activities_nfs['Month_Year'] = pd.to_datetime(activities_nfs['start_date']).dt.strftime('%Y-%m')
+#############################################################################################
 # run
 activities_run = activities_copy.query("type == 'Run'")
 # swim
@@ -103,6 +111,18 @@ print(time_updated_UTC)
 
 #############################################################################################
 # build graphs here
+fig0 = px.bar(
+    activities_nfs, x = "Month_Year", y = "distance",
+    labels = dict(Month_Year ="Month and Year ", distance ="Distance (miles) "),
+    hover_data=["start_date_local"],
+    title = "NFS Team Rides",
+    width = 1000
+)
+# Hover over should be the day, not the first of the month
+fig0.add_hline(y = 20*8)
+fig0.update_traces(marker_line_width = 2.5)
+fig0.update_yaxes(range = [0, 300])
+fig0.update_layout(bargap = 0.8)
 
 # fig1 = px.box(
 #     activities_copy, x = "distance", 
@@ -111,26 +131,26 @@ print(time_updated_UTC)
 #     points="all"
 # )
 
-fig1 = px.box(
-    activities_run, x = "distance", 
-    title = "1. Boxplot: Distribution of Running Distance per Activity in Miles", 
-    # color = "sport_type", 
-    points = "all"
-)
+# fig1 = px.box(
+#     activities_run, x = "distance", 
+#     title = "1. Boxplot: Distribution of Running Distance per Activity in Miles", 
+#     # color = "sport_type", 
+#     points = "all"
+# )
 
-fig2 = px.box(
-    activities_swim, x = "distance", 
-    title = "2. Boxplot: Distribution of Swimming Distance per Activity in Miles", 
-    # color = "sport_type", 
-    points = "all"
-)
+# fig2 = px.box(
+#     activities_swim, x = "distance", 
+#     title = "2. Boxplot: Distribution of Swimming Distance per Activity in Miles", 
+#     # color = "sport_type", 
+#     points = "all"
+# )
 
-fig3 = px.box(
-    activities_bike, x = "distance", 
-    title = "3. Boxplot: Distribution of Biking Distance per Activity in Miles", 
-    # color = "sport_type", 
-    points = "all"
-)
+# fig3 = px.box(
+#     activities_bike, x = "distance", 
+#     title = "3. Boxplot: Distribution of Biking Distance per Activity in Miles", 
+#     # color = "sport_type", 
+#     points = "all"
+# )
 
 #############################################################################################
 
@@ -169,18 +189,18 @@ strava_layout = html.Div(
                 style={"width": "1000px", "height": "700px", "margin": "auto"},
             )
         ),
-        html.Div(
-            dcc.Graph(
-                figure=fig2,
-                style={"width": "1000px", "height": "700px", "margin": "auto"},
-            )
-        ),
-        html.Div(
-            dcc.Graph(
-                figure=fig3,
-                style={"width": "1000px", "height": "700px", "margin": "auto"},
-            )
-        ),                
+        # html.Div(
+        #     dcc.Graph(
+        #         figure=fig2,
+        #         style={"width": "1000px", "height": "700px", "margin": "auto"},
+        #     )
+        # ),
+        # html.Div(
+        #     dcc.Graph(
+        #         figure=fig3,
+        #         style={"width": "1000px", "height": "700px", "margin": "auto"},
+        #     )
+        # ),                
         html.Br(),
         html.Span(
             children=[

@@ -67,14 +67,15 @@
 - https://stackoverflow.com/questions/20994716/what-is-the-difference-between-pip-and-conda#:~:text=It's%20fully%20recommended%20to%20use,perfectly%20acceptable%20to%20use%20pip.
 10. How developers should think about time
 - http://web.archive.org/web/20160803154621/http://www.windward.net/blogs/every-developer-know-time/#.V6IR03bP3mE
-
+11. Working with dates
+- https://www.programiz.com/python-programming/datetime/strftime
 
 ## Goal Gear
 - [x] Tri-capable watch
 - [] Competitive bike
 - [] Better Helmet
 - [] Bike computer
-- [] Daily trainer shoes #3
+- [X] Daily trainer shoes #3
 
 ## Goal ???
 [] Donate old ___ to someone.
