@@ -72,10 +72,9 @@
 
 ## Goal Gear
 - [x] Tri-capable watch
-- [] Competitive bike
 - [] Better Helmet
-- [] Bike computer
 - [X] Daily trainer shoes #3
+- [X] Race shoes
 
 ## Goal ???
 [] Donate old ___ to someone.
