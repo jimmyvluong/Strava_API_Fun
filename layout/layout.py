@@ -186,7 +186,7 @@ strava_layout = html.Div(
         ),        
         html.Div(
             dcc.Graph(
-                figure=fig1,
+                figure=fig0,
                 style={"width": "1000px", "height": "700px", "margin": "auto"},
             )
         ),
