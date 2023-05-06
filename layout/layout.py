@@ -118,16 +118,16 @@ activities_nfs_map['map.polyline'] = activities_nfs_map['map.summary_polyline'].
 
 # location is currently hardcoded to start at the first coordinate of the first ride.
 # an improvement would be to set the location to the centroid of all rides
-m = folium.Map(location = activities_nfs_map['map.polyline'][0][0], zoom_start= 12.25)
-counter = 0
+# m = folium.Map(location = activities_nfs_map['map.polyline'][0][0], zoom_start= 12.25)
+# counter = 0
 
-while counter < len(activities_nfs_map):
+# while counter < len(activities_nfs_map):
     
-    ride = activities_nfs_map.iloc[counter, :]
-    folium.PolyLine(ride['map.polyline'], color = 'red').add_to(m)
-    counter+=1
+#     ride = activities_nfs_map.iloc[counter, :]
+#     folium.PolyLine(ride['map.polyline'], color = 'red').add_to(m)
+#     counter+=1
 
-m.save('nfs_map.html')
+# m.save('nfs_map.html')
 #############################################################################################
 # run
 activities_run = activities_copy.query("type == 'Run'")
@@ -175,7 +175,7 @@ fig0.update_layout(bargap = 0.8)
 #############################################################################################
 
 strava_layout = html.Div(
-    # html.Iframe(src="nfs_map.html", style={"width": "1000px", "height": "700px"}),
+    html.Iframe(src="nfs_map.html", style={"width": "1000px", "height": "700px"}),
     [
 
         # Set the new white-text image.
