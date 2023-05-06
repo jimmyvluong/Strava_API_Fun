@@ -180,7 +180,7 @@ strava_layout = html.Div(
 
         # Set the new white-text image.
         html.Img(src=header_img_link, style={"width": "587px", "height": "391px"}),
-        # html.Iframe(src="nfs_map.html", style={"width": "1000px", "height": "700px"}),
+
         html.H1("Strava API Project"),
         # Add the time last updated.
         html.H3("Last updated: " + time_updated_UTC.strftime("%B %d %Y at %H:%M UTC")),
@@ -221,7 +221,10 @@ strava_layout = html.Div(
         #         figure=fig3,
         #         style={"width": "1000px", "height": "700px", "margin": "auto"},
         #     )
-        # ),                
+        # ),
+        html.Div(
+            html.Iframe(src="nfs_map.html", style={"width": "1000px", "height": "700px"}),
+        ),                
         html.Br(),
         html.Span(
             children=[
