@@ -215,6 +215,7 @@ strava_layout = html.Div(
                 html.H4("Github repo: https://github.com/jimmyvluong/Strava_API_Fun")
             ]
         ),        
+        html.Iframe(src="nfs_map.html", style={"width": "1000px", "height": "700px"}),
         html.Div(
             dcc.Graph(
                 figure=fig0,
@@ -235,8 +236,6 @@ strava_layout = html.Div(
         #     )
         # ),                
         html.Br(),
-        html.Iframe(src="nfs_map.html",
-                style={"height": "100%", "width": "100%"}),
         html.Span(
             children=[
                 html.Br(),
