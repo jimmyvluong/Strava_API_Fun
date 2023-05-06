@@ -138,7 +138,7 @@ activities_bike = activities_copy.query("type == 'Ride'")
 #############################################################################################
 # header_img_link = "https://images.unsplash.com/photo-1524646349956-1590eacfa324?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
 # new temp img
-header_img_link = "https://dgalywyr863hv.cloudfront.net/pictures/clubs/338556/8042232/8/large.jpg"
+# header_img_link = "https://dgalywyr863hv.cloudfront.net/pictures/clubs/338556/8042232/8/large.jpg"
 # get the time last updated in UTC (only for Render)
 time_updated_UTC = datetime.datetime.now()
 print(time_updated_UTC)
@@ -192,7 +192,7 @@ strava_layout = html.Div(
     [
 
         # Set the new white-text image.
-        html.Img(src=header_img_link, style={"width": "587px", "height": "391px"}),
+        # html.Img(src=header_img_link, style={"width": "587px", "height": "391px"}),
         html.H1("Strava API Project"),
         # Add the time last updated.
         html.H3("Last updated: " + time_updated_UTC.strftime("%B %d %Y at %H:%M UTC")),
