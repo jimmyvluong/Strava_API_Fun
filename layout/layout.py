@@ -222,9 +222,9 @@ strava_layout = html.Div(
         #         style={"width": "1000px", "height": "700px", "margin": "auto"},
         #     )
         # ),
-        html.Div(
-            html.Iframe(src="nfs_map.html", style={"width": "1000px", "height": "700px"}),
-        ),                
+        # html.Div(
+        #     html.Iframe(src="nfs_map.html", style={"width": "1000px", "height": "700px"}),
+        # ),                
         html.Br(),
         html.Span(
             children=[
