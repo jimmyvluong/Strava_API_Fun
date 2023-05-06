@@ -69,7 +69,8 @@
 - http://web.archive.org/web/20160803154621/http://www.windward.net/blogs/every-developer-know-time/#.V6IR03bP3mE
 11. Working with dates
 - https://www.programiz.com/python-programming/datetime/strftime
-
+12. Using iFrames in Dash-Plotly
+- https://stackoverflow.com/questions/64736956/how-to-use-iframe-in-dash-plotly-python-html
 ## Goal Gear
 - [x] Tri-capable watch
 - [] Better Helmet

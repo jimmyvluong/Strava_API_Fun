@@ -18,6 +18,15 @@ import os
 import requests
 import urllib3
 
+# import mapping packages
+
+# import modules
+import os
+import folium
+import polyline
+import base64
+from tqdm import tqdm
+
 # See Github secrets: https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/GitHub-Actions-Secrets-Example-Token-Tutorial#:~:text=Go%20to%20the%20Settings%20tab,text%20secret.%20to%20the%20identifier
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -95,6 +104,28 @@ activities_nfs = activities_copy.query('name.str.contains("NFS")', engine ='pyth
 # https://stackoverflow.com/questions/25146121/extracting-just-month-and-year-separately-from-pandas-datetime-column
 # create a column that extracts month and year from the activity
 activities_nfs['Month_Year'] = pd.to_datetime(activities_nfs['start_date']).dt.strftime('%Y-%m')
+############
+
+activities_nfs_copy = activities.copy(deep = True)
+# the line below is likely causing the "A value is trying to be set on a copy of a slice from a DataFrame." warning.
+activities_nfs_map = activities_nfs_copy.query('name.str.contains("NFS")', engine = 'python')
+activities_nfs_map.reset_index(drop = True, inplace = True)
+
+# add decoded summary polylines
+# activities['map.summary_polyline'] contains an encoded polyline
+# .apply(polyline.decode) decodes that polyline into latitude and longitude
+activities_nfs_map['map.polyline'] = activities_nfs_map['map.summary_polyline'].apply(polyline.decode)
+
+m = folium.Map(location = activities_nfs_map['map.polyline'][0][0], zoom_start= 12.25)
+counter = 0
+
+while counter < len(activities_nfs_map):
+    
+    ride = activities_nfs_map.iloc[counter, :]
+    folium.PolyLine(ride['map.polyline'], color = 'red').add_to(m)
+    counter+=1
+
+m.save('../layout/nfs_map.html')
 #############################################################################################
 # run
 activities_run = activities_copy.query("type == 'Run'")
@@ -174,9 +205,7 @@ strava_layout = html.Div(
         # ),
         html.Span(
             children=[
-                html.H4("These plots show the distances I've run, swim, and biked for every activity I'ved logged in Strava."),
-                html.Br(),
-                html.H4("The longer bike rides are more recent and with friends :) "),
+                html.H4("Bike rides with friends :)"),
                 html.Br(),
                 html.H4("A Python script sources data using the Strava API, and Render.com handles CI and deployment for free."),                
                 html.H4("More features are in the works, including mapping of activities!"),
@@ -190,6 +219,7 @@ strava_layout = html.Div(
                 style={"width": "1000px", "height": "700px", "margin": "auto"},
             )
         ),
+        
         # html.Div(
         #     dcc.Graph(
         #         figure=fig2,
@@ -203,9 +233,10 @@ strava_layout = html.Div(
         #     )
         # ),                
         html.Br(),
+        html.Iframe(src="nfs_map.html",
+                style={"height": "100%", "width": "100%"}),
         html.Span(
             children=[
-                html.H4("This website is in active development."),
                 html.Br(),
                 html.I("This website was created under Strava's API Agreement and \
                      it is not endorsed by or affiliated with Strava."),
