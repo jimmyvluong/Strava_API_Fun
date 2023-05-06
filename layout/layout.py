@@ -127,7 +127,7 @@ while counter < len(activities_nfs_map):
     folium.PolyLine(ride['map.polyline'], color = 'red').add_to(m)
     counter+=1
 
-m.save('/layout/nfs_map.html')
+m.save('nfs_map.html')
 #############################################################################################
 # run
 activities_run = activities_copy.query("type == 'Run'")
