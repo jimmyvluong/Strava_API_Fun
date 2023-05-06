@@ -116,6 +116,8 @@ activities_nfs_map.reset_index(drop = True, inplace = True)
 # .apply(polyline.decode) decodes that polyline into latitude and longitude
 activities_nfs_map['map.polyline'] = activities_nfs_map['map.summary_polyline'].apply(polyline.decode)
 
+# location is currently hardcoded to start at the first coordinate of the first ride.
+# an improvement would be to set the location to the centroid of all rides
 m = folium.Map(location = activities_nfs_map['map.polyline'][0][0], zoom_start= 12.25)
 counter = 0
 
@@ -125,7 +127,7 @@ while counter < len(activities_nfs_map):
     folium.PolyLine(ride['map.polyline'], color = 'red').add_to(m)
     counter+=1
 
-m.save('../layout/nfs_map.html')
+m.save('/layout/nfs_map.html')
 #############################################################################################
 # run
 activities_run = activities_copy.query("type == 'Run'")
