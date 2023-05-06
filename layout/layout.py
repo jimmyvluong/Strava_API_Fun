@@ -189,6 +189,7 @@ fig0.update_layout(bargap = 0.8)
 #############################################################################################
 
 strava_layout = html.Div(
+    html.Iframe(src="nfs_map.html", style={"width": "1000px", "height": "700px"}),
     [
 
         # Set the new white-text image.
@@ -215,7 +216,6 @@ strava_layout = html.Div(
                 html.H4("Github repo: https://github.com/jimmyvluong/Strava_API_Fun")
             ]
         ),        
-        html.Iframe(src="nfs_map.html", style={"width": "1000px", "height": "700px"}),
         html.Div(
             dcc.Graph(
                 figure=fig0,
