@@ -71,6 +71,7 @@
 - https://www.programiz.com/python-programming/datetime/strftime
 12. Using iFrames in Dash-Plotly
 - https://stackoverflow.com/questions/64736956/how-to-use-iframe-in-dash-plotly-python-html
+- https://melaniewalsh.github.io/Intro-Cultural-Analytics/07-Mapping/03-Publish-Your-Map.html
 ## Goal Gear
 - [x] Tri-capable watch
 - [] Better Helmet
