@@ -211,8 +211,8 @@ strava_layout = html.Div(
         ),
         # html.Iframe(src="https://www.ons.gov.uk/visualisations/dvc914/map/index.html",
         #         style={"height": "1067px", "width": "100%"}),
-        html.Iframe(src="https://github.com/jimmyvluong/Strava_API_Fun/blob/main/layout/nfs_map.html",
-                style={"height": "1067px", "width": "100%"}),
+        # html.Iframe(src="https://github.com/jimmyvluong/Strava_API_Fun/blob/main/layout/nfs_map.html",
+        #         style={"height": "1067px", "width": "100%"}),
         # html.Div(
         #     dcc.Graph(
         #         figure=fig2,
