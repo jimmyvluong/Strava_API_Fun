@@ -20,12 +20,12 @@ import urllib3
 
 # import mapping packages
 
-# import modules
 import os
 import folium
 import polyline
 import base64
-from tqdm import tqdm
+# tqdm is only needed for getting elevation data
+# from tqdm import tqdm
 
 # See Github secrets: https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/GitHub-Actions-Secrets-Example-Token-Tutorial#:~:text=Go%20to%20the%20Settings%20tab,text%20secret.%20to%20the%20identifier
 
@@ -116,7 +116,7 @@ activities_nfs_map.reset_index(drop = True, inplace = True)
 # .apply(polyline.decode) decodes that polyline into latitude and longitude
 activities_nfs_map['map.polyline'] = activities_nfs_map['map.summary_polyline'].apply(polyline.decode)
 
-# location is currently hardcoded to start at the first coordinate of the first ride.
+# location is currently assigned to start at the first coordinate of the first ride.
 # an improvement would be to set the location to the centroid of all rides
 # m = folium.Map(location = activities_nfs_map['map.polyline'][0][0], zoom_start= 12.25)
 # counter = 0
@@ -166,13 +166,6 @@ fig0.update_layout(bargap = 0.8)
 #     points="all"
 # )
 
-# fig1 = px.box(
-#     activities_run, x = "distance", 
-#     title = "1. Boxplot: Distribution of Running Distance per Activity in Miles", 
-#     # color = "sport_type", 
-#     points = "all"
-# )
-
 #############################################################################################
 
 strava_layout = html.Div(
@@ -182,7 +175,7 @@ strava_layout = html.Div(
         # Set the new white-text image.
         html.Img(src=header_img_link, style={"width": "587px", "height": "391px"}),
 
-        html.H1("Strava API Project"),
+        html.H1("Using Strava's API to map out rides with friends!"),
         # Add the time last updated.
         html.H3("Last updated: " + time_updated_UTC.strftime("%B %d %Y at %H:%M UTC")),
         # Show the total player count.
@@ -196,10 +189,11 @@ strava_layout = html.Div(
         # ),
         html.Span(
             children=[
-                html.H4("Bike rides with friends :)"),
+                # html.H4("Bike rides with friends :)"),
                 html.Br(),
-                html.H4("A Python script sources data using the Strava API, and Render.com handles CI and deployment for free."),                
-                html.H4("More features are in the works, including mapping of activities!"),
+                html.H4("A Python script sources data using the Strava API, and Render.com handles CI and deployment for free."),         
+                html.H4("Front end built using dash and plotly."),        
+                html.H4("More features are in the works..."),
                 html.Br(),
                 html.H4("Github repo: https://github.com/jimmyvluong/Strava_API_Fun")
             ]
@@ -212,7 +206,7 @@ strava_layout = html.Div(
         ),
         # html.Iframe(src="https://www.ons.gov.uk/visualisations/dvc914/map/index.html",
         #         style={"height": "1067px", "width": "100%"}),
-        html.H4("Map of all NFS rides."),
+        html.H4("Map of all NFS rides to date, using the folium package."),
         html.Iframe(src="https://jimmyvluong.github.io/Strava_API_Fun/nfs_map.html",
                 style={"height": "1067px", "width": "1000px"}),
         # html.Div(
@@ -220,16 +214,7 @@ strava_layout = html.Div(
         #         figure=fig2,
         #         style={"width": "1000px", "height": "700px", "margin": "auto"},
         #     )
-        # ),
-        # html.Div(
-        #     dcc.Graph(
-        #         figure=fig3,
-        #         style={"width": "1000px", "height": "700px", "margin": "auto"},
-        #     )
-        # ),
-        # html.Div(
-        #     html.Iframe(src="nfs_map.html", style={"width": "1000px", "height": "700px"}),
-        # ),                
+        # ),               
         html.Br(),
         html.Span(
             children=[

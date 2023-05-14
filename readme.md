@@ -1,5 +1,17 @@
 # Strava API Fun
 
+
+## Workflow
+1. Get data using Strava API.
+2. Clean data, transform data, and create features.
+3. Create graphs and maps.
+
+## Implemented Software Development Features
+1. CI/CD - Push changes via VS Code, deploy latest branch via Render.
+2. Test and troubleshoot in a local development environment, and deploy a production environment.
+3. Portability - All required packages are listed in requirements.txt
+4. 
+
 ### Data source: 
 - [Strava API](https://developers.strava.com/)
 ### Inspiration from: 
@@ -24,7 +36,7 @@
 ## Software Dev Features
 [] Pre-and post hooks for managing Conda environments
 - https://stackoverflow.com/questions/52038034/push-and-pull-my-conda-environment-using-git/56787188#56787188
-[] Protect my API keys by reading data from a Google spreadsheet
+[] ~~Protect my API keys by reading data from a Google spreadsheet~~
 [] Optional - let others use their own spreadsheet using the spreadsheet id
 
 ## Key concepts practiced
