@@ -111,4 +111,10 @@ https://science4performance.com/2017/05/05/strava-fitness-and-freshness/
 - hard, hard, easy patterns? Does my training mirror this? What is a hard week? Pace, mileage, heartrate, average heartrate could label a week by difficulty? https://www.outsideonline.com/health/running/training-advice/science/big-data-reveals-new-marathon-training-approaches/
 - Heat map for a grupetto
 - Weekly training load? For last 3 months? Last year?
-- REFOCUS: Plug in a plan, see how well I'm meeting it
+
+- How many miles did I run this week?
+- What is my goal mileage for the week?
+- How many more miles do I need to run to meet this goal? If over, how many miles did I run over?
+- What was my average pace per mile for the entire week?
+
+- Week 1, Week 2, Week 3, etc.
