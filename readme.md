@@ -16,6 +16,7 @@
 - [Strava API](https://developers.strava.com/)
 ### Inspiration from: 
 - [Rene's writeup](https://towardsdatascience.com/visualize-your-strava-data-on-an-interactive-map-with-python-92c1ce69e91d)
+- https://themostlaps.com/
 
 ## Planned Features
 - [] Elevation profile
@@ -110,3 +111,4 @@ https://science4performance.com/2017/05/05/strava-fitness-and-freshness/
 - hard, hard, easy patterns? Does my training mirror this? What is a hard week? Pace, mileage, heartrate, average heartrate could label a week by difficulty? https://www.outsideonline.com/health/running/training-advice/science/big-data-reveals-new-marathon-training-approaches/
 - Heat map for a grupetto
 - Weekly training load? For last 3 months? Last year?
+- REFOCUS: Plug in a plan, see how well I'm meeting it
