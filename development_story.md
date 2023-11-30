@@ -12,3 +12,8 @@
 - Strava doesn't offer the feature of tracking goals when people ride together - I will try to build out a way to track our group ride's progress
 6. May 2023
 - I found a way to show the map by hosting the file on github pages.
+7. November 2023
+- Floating the idea to create a "Year in Review" story
+- show: race results tag: "race"
+- show: sticking to the plan"
+- 
