@@ -17,4 +17,4 @@
 - Floating the idea to create a "Year in Review" story
 - show: race results tag: "race"
 - show: sticking to the plan"
-- 
+- Minutes of training by graph for CIM training group?
