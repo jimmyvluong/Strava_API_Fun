@@ -129,6 +129,31 @@ activities_nfs_map['map.polyline'] = activities_nfs_map['map.summary_polyline'].
 
 # m.save('nfs_map.html')
 #############################################################################################
+
+# https://stackoverflow.com/questions/25146121/extracting-just-month-and-year-separately-from-pandas-datetime-column
+# create a column that extracts month and year from the activity
+# df['yyyy-mm'] = pd.to_datetime(df['ArrivalDate']).dt.strftime('%Y-%m')
+activities_copy['Month_Year'] = pd.to_datetime(activities_copy['start_date_local']).dt.strftime('%Y-%m')
+# https://stackoverflow.com/questions/2600775/how-to-get-week-number-in-python
+# make a Week_Of_Year column
+activities_copy['Week_Of_Year'] = pd.to_datetime(activities_copy['start_date_local']).dt.strftime('%U')
+# get weekly mileage and total weekly moving time
+df_miles_per_week = pd.DataFrame(activities_copy.groupby(['Week_Of_Year'])['distance', 'moving_time'].sum().reset_index())
+# make a average mph column
+df_miles_per_week['Average Moving Speed (mph)'] = df_miles_per_week['distance']/(df_miles_per_week['moving_time']/(60*60))
+df_miles_per_week.rename(columns={"distance": "Weekly Mileage", "moving_time": "Total Moving Time (seconds)"})
+# convert the Week_Of_Year column to numeric type so we can filter on it
+df_miles_per_week["Week_Of_Year"] = pd.to_numeric(df_miles_per_week["Week_Of_Year"])
+# Instead, read in the weekly mileage goals from a .csv file
+goal_df = pd.read_csv('..\data\CIM Training Plans 2023 - Weekly Mileage Goals.csv')
+df_marathon = df_miles_per_week.query("Week_Of_Year >= 31")
+# merge Weekly_Mileage_Goal onto the df_marathon
+df_combined = df_marathon.merge(goal_df, how = 'left', left_on='Week_Of_Year', right_on='Week')
+df_combined['Training Week'] = df_combined['Week_Of_Year'] - 30
+df_combined['distance']= round(df_combined['distance'],1)
+df_combined['Mileage Difference'] = round(df_combined['distance'] - df_combined['Total Mileage'], 1)
+
+#############################################################################################
 # run
 activities_run = activities_copy.query("type == 'Run'")
 # swim
@@ -146,18 +171,18 @@ print(time_updated_UTC)
 
 #############################################################################################
 # build graphs here
-fig0 = px.bar(
-    activities_nfs, x = "Month_Year", y = "distance",
-    labels = dict(Month_Year ="Month and Year ", distance ="Distance (miles) "),
-    hover_data=["start_date_local"],
-    title = "NFS Team Rides",
-    width = 1000
-)
-# Hover over should be the day, not the first of the month
-fig0.add_hline(y = 20*8)
-fig0.update_traces(marker_line_width = 2.5)
-fig0.update_yaxes(range = [0, 300])
-fig0.update_layout(bargap = 0.8)
+# fig0 = px.bar(
+#     activities_nfs, x = "Month_Year", y = "distance",
+#     labels = dict(Month_Year ="Month and Year ", distance ="Distance (miles) "),
+#     hover_data=["start_date_local"],
+#     title = "NFS Team Rides",
+#     width = 1000
+# )
+# # Hover over should be the day, not the first of the month
+# fig0.add_hline(y = 20*8)
+# fig0.update_traces(marker_line_width = 2.5)
+# fig0.update_yaxes(range = [0, 300])
+# fig0.update_layout(bargap = 0.8)
 
 # fig1 = px.box(
 #     activities_copy, x = "distance", 
@@ -165,6 +190,23 @@ fig0.update_layout(bargap = 0.8)
 #     color="sport_type", 
 #     points="all"
 # )
+
+# plot weekly mileage
+import plotly.express as px
+
+fig0 = px.bar(
+    df_combined, x = "Training Week", y = "distance",
+    labels = dict(Week_Of_Year ="Training Week", distance ="Distance (miles) "),
+    #hover_data=["start_date_local"],
+    title = "CIM Weekly Mileage Log - Can you see which weeks I was injured?",
+    width = 1000
+)
+# Hover over should be the day, not the first of the month
+# fig0.add_hline(y = 20*8)
+fig0.update_traces(marker_line_width = 2.5)
+fig0.update_yaxes(range = [0, 50])
+#fig0.update_layout(bargap = 0.8)
+fig0.show() 
 
 #############################################################################################
 
@@ -175,7 +217,7 @@ strava_layout = html.Div(
         # Set the new white-text image.
         html.Img(src=header_img_link, style={"width": "587px", "height": "391px"}),
 
-        html.H1("Using Strava's API to map out rides with friends!"),
+        html.H1("Using Strava's API to track CIM training!"),
         # Add the time last updated.
         html.H3("Last updated: " + time_updated_UTC.strftime("%B %d %Y at %H:%M UTC")),
         # Show the total player count.
