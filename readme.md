@@ -118,3 +118,11 @@ https://science4performance.com/2017/05/05/strava-fitness-and-freshness/
 - What was my average pace per mile for the entire week?
 
 - Week 1, Week 2, Week 3, etc.
+
+- Marathon edition?
+1. Picture of CIM start
+2. Training plan picture
+3. Graph of training plan versus actual training
+4. Map of training runs
+5. Map of CIM course
+6. Pics + celebration pics?
