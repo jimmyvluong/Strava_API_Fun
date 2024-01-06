@@ -146,7 +146,7 @@ df_miles_per_week.rename(columns={"distance": "Weekly Mileage", "moving_time": "
 df_miles_per_week["Week_Of_Year"] = pd.to_numeric(df_miles_per_week["Week_Of_Year"])
 df_miles_per_week['Training Week'] = df_miles_per_week['Week_Of_Year'] - 30
 df_miles_per_week['distance']= round(df_miles_per_week['distance'],1)
-
+df_marathon = df_miles_per_week.query("Week_Of_Year >= 31")
 
 
 # Instead, read in the weekly mileage goals from a .csv file
@@ -159,16 +159,6 @@ df_miles_per_week['distance']= round(df_miles_per_week['distance'],1)
 # df_combined['Mileage Difference'] = round(df_combined['distance'] - df_combined['Total Mileage'], 1)
 
 #############################################################################################
-# run
-activities_run = activities_copy.query("type == 'Run'")
-# swim
-activities_swim = activities_copy.query("type == 'Swim'")
-# bike
-activities_bike = activities_copy.query("type == 'Ride'")
-#############################################################################################
-# header_img_link = "https://images.unsplash.com/photo-1524646349956-1590eacfa324?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-# new temp img
-# header_img_link = "https://dgalywyr863hv.cloudfront.net/pictures/clubs/338556/8042232/8/large.jpg"
 header_img_link = "https://images.unsplash.com/photo-1586280246643-9e2f01e3c14e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
 
 # get the time last updated in UTC (only for Render)
@@ -201,7 +191,7 @@ print(time_updated_UTC)
 import plotly.express as px
 
 fig0 = px.bar(
-    df_miles_per_week, x = "Training Week", y = "distance",
+    df_marathon, x = "Training Week", y = "distance",
     labels = dict(Week_Of_Year ="Training Week", distance ="Distance (miles) "),
     #hover_data=["start_date_local"],
     title = "CIM Weekly Mileage Log - Can you see which weeks I was injured?",
@@ -252,17 +242,9 @@ strava_layout = html.Div(
                 style={"width": "1000px", "height": "700px", "margin": "auto"},
             )
         ),
-        # html.Iframe(src="https://www.ons.gov.uk/visualisations/dvc914/map/index.html",
-        #         style={"height": "1067px", "width": "100%"}),
         html.H4("Map of all CIM training runs, using the folium package."),
         html.Iframe(src="https://jimmyvluong.github.io/Strava_API_Fun/cim_map.html",
-                style={"height": "1067px", "width": "1000px"}),
-        # html.Div(
-        #     dcc.Graph(
-        #         figure=fig2,
-        #         style={"width": "1000px", "height": "700px", "margin": "auto"},
-        #     )
-        # ),               
+                style={"height": "1067px", "width": "1000px"}),              
         html.Br(),
         html.Span(
             children=[
