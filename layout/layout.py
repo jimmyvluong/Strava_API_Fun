@@ -189,10 +189,8 @@ strava_layout = html.Div(
                 html.H4("A Python script sources data using the Strava API, and Render.com handles CI and deployment for free."),         
                 html.H4("Front end built using dash and plotly."),        
                 html.Br(),
-                html.H4("Github repo: https://github.com/jimmyvluong/Strava_API_Fun")
-                <p> Fast forward to Spring 2023 and I signed up for a training group for the Shamrock Half Marathon. 
-                I had caught the running bug.
-                </p>
+                html.H4("Github repo: https://github.com/jimmyvluong/Strava_API_Fun"),
+                html.P("Fast forward to Spring 2023 and I signed up for a training group for the Shamrock Half Marathon. I had caught the running bug.")
             ]
         ),        
         html.Div(
