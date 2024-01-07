@@ -159,7 +159,8 @@ df_marathon = df_miles_per_week.query("Week_Of_Year >= 31")
 # df_combined['Mileage Difference'] = round(df_combined['distance'] - df_combined['Total Mileage'], 1)
 
 #############################################################################################
-header_img_link = "https://images.unsplash.com/photo-1586280246643-9e2f01e3c14e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+# header_img_link = "https://images.unsplash.com/photo-1586280246643-9e2f01e3c14e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+header_img_link = "https://raw.githubusercontent.com/jimmyvluong/Strava_API_Fun/main/pictures/2_CIM_Start.jpg"
 
 # get the time last updated in UTC (only for Render)
 time_updated_UTC = datetime.datetime.now()
