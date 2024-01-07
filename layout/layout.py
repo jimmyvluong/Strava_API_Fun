@@ -174,23 +174,22 @@ fig0.show()
 strava_layout = html.Div(
 
     [
-
         # Set the new white-text image.
         html.Img(src=header_img_link, style={"width": "587px", "height": "391px"}),
 
-        html.H1("Using Strava's API to track CIM training!"),
+        html.H1("Learning how to run far with the help of Strava's API."),
         # Add the time last updated.
         html.H3("Last updated: " + time_updated_UTC.strftime("%B %d %Y at %H:%M UTC")),
 
         html.Span(
             children=[
-                # html.H4("Bike rides with friends :)"),
                 html.Br(),
-                html.H4("A Python script sources data using the Strava API, and Render.com handles CI and deployment for free."),         
+                html.H4("How it works: A Python script sources my Strava data using the Strava API."),
+                html.H4("Render.com handles CI and deployment for free."),         
                 html.H4("Front end built using dash and plotly."),        
                 html.Br(),
                 html.H4("Github repo: https://github.com/jimmyvluong/Strava_API_Fun"),
-                html.P("Fast forward to Spring 2023 and I signed up for a training group for the Shamrock Half Marathon. I had caught the running bug.")
+                html.P("In Fall of 2022 my friend Jason invited me to run a 10k at the Clarksburg Country Run. I didn’t have any background in running, but I had been playing pickup basketball here and there. I signed up on a whim and ended up loving the challenge of pushing myself to run farther than I had ever run before. 6.2 miles seemed really far at the time. Little did I know I’d be running 20 more miles on top of that in a year.")
             ]
         ),        
         html.Div(
@@ -201,7 +200,7 @@ strava_layout = html.Div(
         ),
         html.H4("Map of all CIM training runs, using the folium package."),
         html.Iframe(src="https://jimmyvluong.github.io/Strava_API_Fun/cim_map.html",
-                style={"height": "1067px", "width": "1000px"}),              
+                style={"height": "1067px", "width": "1000px", "margin": "auto"}),              
         html.Br(),
         html.Span(
             children=[
