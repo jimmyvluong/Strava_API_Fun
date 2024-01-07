@@ -175,7 +175,10 @@ strava_layout = html.Div(
 
     [
         # Set the new white-text image.
-        html.Img(src=header_img_link, style={"width": "587px", "height": "391px"}),
+        ##### HEADER IMAGE #####
+        html.Img(src=header_img_link, style={
+            "width": "587px", 
+            "height": "391px"}),
 
         html.H1("Learning how to run far with the help of Strava's API."),
         # Add the time last updated.
@@ -187,23 +190,59 @@ strava_layout = html.Div(
                 html.H4("How it works: A Python script sources my Strava data using the Strava API."),
                 html.H4("Render.com handles CI and deployment for free."),         
                 html.H4("Front end built using dash and plotly."),        
-                html.Br(),
                 html.H4("Github repo: https://github.com/jimmyvluong/Strava_API_Fun"),
+                html.Br(),
                 html.P("In Fall of 2022 my friend Jason invited me to run a 10k at the Clarksburg Country Run. \
                        I didn’t have any background in running, but I had been playing pickup basketball here and there.  \
                        I signed up on a whim and ended up loving the challenge of pushing myself to run farther than I had ever run before. \
                        6.2 miles seemed really far at the time. Little did I know I’d be running 20 more miles on top of that in a year.")
             ]
-        ),        
+        
+        ),
+        ##### SHAMROCK IMAGE #####
+        html.Img(src="https://raw.githubusercontent.com/jimmyvluong/Strava_API_Fun/main/pictures/9_shamrock_2023.jpg", 
+            style={
+            "width": "750px", 
+            "height": "500px"}),
+        html.P("Fast forward to Spring 2023 and I signed up for a training group for the Shamrock Half Marathon. \
+               I had caught the running bug."),
+        html.P("The next logical step for any runner is to sign up for a race that’s twice the distance of your past race, right? \
+               I knew training with others is how I run best, so once again I joined a Fleet Feet training group - this time for the California International Marathon (CIM)."),
+        html.P("At the same time I was itching to learn more about the Strava API and how to get access to my training data. \
+               I was curious to see how my training was measuring up to the prescribed Fleet Feet training program."),
+        
         html.Div(
+        ##### WEEKLY MILES CHART #####
             dcc.Graph(
                 figure = fig0,
-                style={"width": "1000px", "height": "700px", "margin": "auto"},
+                style={
+                    "width": "1000px", 
+                    "height": "700px", 
+                    "margin": "auto"},
             )
         ),
+        html.P("What you see above is the total mileage of every single training session in the 23 weeks leading up to CIM. \
+               Can you tell which weeks I was injured? Which week had the 20-mile test race? When did I start tapering?"),
+        html.P("I calculated the mileage we were 'supposed' to reach each week according to the training plan, \
+               and it ranged from a MINIMUM of 22.5 miles per week and a maximum of 42.75 miles per week. \
+               My training mileage peaked at 31.4 miles per week, with a low of 4 miles per week when I was injured.\
+               This simple analysis confirmed that I was undertrained for the marathon (my quads confirmed it too during the race!) \
+               "),
+        ##### CELEBRATION IMAGE #####
+        html.Img(src="https://raw.githubusercontent.com/jimmyvluong/Strava_API_Fun/main/pictures/8_the_support_crew.png", 
+            style={
+            "width": "826px", 
+            "height": "458px"}),
+        ##### CIM RUNS MAP #####
         html.H4("Map of all CIM training runs, using the folium package."),
+        html.P("The training runs took me as far as the north part of Lake Natomas!"),       
+        html.P("Many weekend mornings were spent trotting along the American River Trail."),    
         html.Iframe(src="https://jimmyvluong.github.io/Strava_API_Fun/cim_map.html",
-                style={"height": "1067px", "width": "1000px", "margin": "auto"}),              
+                style={
+                    "height": "1067px", 
+                    "width": "1000px",
+                    "margin": "auto",
+                    "text-align": "center"}),
         html.Br(),
         html.Span(
             children=[
