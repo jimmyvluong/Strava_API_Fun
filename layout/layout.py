@@ -226,23 +226,28 @@ strava_layout = html.Div(
         html.P("I calculated the mileage we were 'supposed' to reach each week according to the training plan, \
                and it ranged from a MINIMUM of 22.5 miles per week and a maximum of 42.75 miles per week. \
                My training mileage peaked at 31.4 miles per week, with a low of 4 miles per week when I was injured.\
-               This simple analysis confirmed that I was undertrained for the marathon (my quads confirmed it too during the race!) \
-               "),
-        ##### CELEBRATION IMAGE #####
-        html.Img(src="https://raw.githubusercontent.com/jimmyvluong/Strava_API_Fun/main/pictures/8_the_support_crew.png", 
-            style={
-            "width": "826px", 
-            "height": "458px"}),
+               This simple analysis confirmed that I was undertrained for the marathon (my quads confirmed it too during the race!)"),
+
         ##### CIM RUNS MAP #####
         html.H4("Map of all CIM training runs, using the folium package."),
         html.P("The training runs took me as far as the north part of Lake Natomas!"),       
         html.P("Many weekend mornings were spent trotting along the American River Trail."),    
         html.Iframe(src="https://jimmyvluong.github.io/Strava_API_Fun/cim_map.html",
                 style={
-                    "height": "1067px", 
-                    "width": "1000px",
+                    "height": "500px", 
+                    "width": "750px",
                     "margin": "auto",
                     "text-align": "center"}),
+        ##### CELEBRATION IMAGE #####
+        html.Img(src="https://raw.githubusercontent.com/jimmyvluong/Strava_API_Fun/main/pictures/8_the_support_crew.png", 
+            style={
+            "width": "826px", 
+            "height": "458px"}),
+        html.P("Overall it was a fantastic experience. My quads siezed up around mile 18 and I turkey trotted the remaining 8.2 miles to the finish line. \
+               My friends came out to support me and I was so stoked to see them pop up so many times on the course and push me forward. \
+               Would I do it again? Yes 100%. But I'm going to work on injury prevention strategies and focus more on hill training. \
+               I'm also looking at ultra marathons out on the trails near Auburn... Stay tuned!"),
+        
         html.Br(),
         html.Span(
             children=[
