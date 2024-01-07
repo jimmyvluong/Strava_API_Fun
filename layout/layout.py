@@ -189,7 +189,10 @@ strava_layout = html.Div(
                 html.H4("Front end built using dash and plotly."),        
                 html.Br(),
                 html.H4("Github repo: https://github.com/jimmyvluong/Strava_API_Fun"),
-                html.P("In Fall of 2022 my friend Jason invited me to run a 10k at the Clarksburg Country Run. I didn’t have any background in running, but I had been playing pickup basketball here and there. I signed up on a whim and ended up loving the challenge of pushing myself to run farther than I had ever run before. 6.2 miles seemed really far at the time. Little did I know I’d be running 20 more miles on top of that in a year.")
+                html.P("In Fall of 2022 my friend Jason invited me to run a 10k at the Clarksburg Country Run. \
+                       I didn’t have any background in running, but I had been playing pickup basketball here and there.  \
+                       I signed up on a whim and ended up loving the challenge of pushing myself to run farther than I had ever run before. \
+                       6.2 miles seemed really far at the time. Little did I know I’d be running 20 more miles on top of that in a year.")
             ]
         ),        
         html.Div(
