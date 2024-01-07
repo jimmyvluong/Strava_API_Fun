@@ -229,7 +229,7 @@ strava_layout = html.Div(
                This simple analysis confirmed that I was undertrained for the marathon (my quads confirmed it too during the race!)"),
 
         ##### CIM RUNS MAP #####
-        html.H4("Map of all CIM training runs, using the folium package."),
+        html.H4("Where did I train? Here's a map of all CIM training runs, created using the folium package."),
         html.P("The training runs took me as far as the north part of Lake Natomas!"),       
         html.P("Many weekend mornings were spent trotting along the American River Trail."),    
         html.Iframe(src="https://jimmyvluong.github.io/Strava_API_Fun/cim_map.html",
