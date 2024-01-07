@@ -83,8 +83,8 @@ activities['start_date_local'] = activities['start_date_local'].dt.date
 # make a copy of activities DataFrame for feature engineering
 activities_copy = activities.copy()
 
-# filter down to Ride, Run, and Swim activities
-activities_copy = activities_copy.query("type == 'Ride' | type == 'Run' | type == 'Swim'")
+# filter down to Run and TrailRun activties
+activities_copy = activities_copy.query("type == 'Run' | type == 'TrailRun'")
 
 # convert data types
 activities_copy.loc[:, 'start_date'] = pd.to_datetime(activities_copy['start_date']).dt.tz_localize(None)
@@ -97,37 +97,8 @@ activities_copy.loc[:, 'max_speed'] *= 2.23693629 # convert from meters/second t
 # activities_copy.set_index('start_date_local', inplace=True)
 
 #############################################################################################
-# separate out by sport or group here
-# nfs team activities
+# create map here
 
-activities_nfs = activities_copy.query('name.str.contains("NFS")', engine ='python')
-# https://stackoverflow.com/questions/25146121/extracting-just-month-and-year-separately-from-pandas-datetime-column
-# create a column that extracts month and year from the activity
-activities_nfs['Month_Year'] = pd.to_datetime(activities_nfs['start_date']).dt.strftime('%Y-%m')
-############
-
-activities_nfs_copy = activities.copy(deep = True)
-# the line below is likely causing the "A value is trying to be set on a copy of a slice from a DataFrame." warning.
-activities_nfs_map = activities_nfs_copy.query('name.str.contains("NFS")', engine = 'python')
-activities_nfs_map.reset_index(drop = True, inplace = True)
-
-# add decoded summary polylines
-# activities['map.summary_polyline'] contains an encoded polyline
-# .apply(polyline.decode) decodes that polyline into latitude and longitude
-activities_nfs_map['map.polyline'] = activities_nfs_map['map.summary_polyline'].apply(polyline.decode)
-
-# location is currently assigned to start at the first coordinate of the first ride.
-# an improvement would be to set the location to the centroid of all rides
-# m = folium.Map(location = activities_nfs_map['map.polyline'][0][0], zoom_start= 12.25)
-# counter = 0
-
-# while counter < len(activities_nfs_map):
-    
-#     ride = activities_nfs_map.iloc[counter, :]
-#     folium.PolyLine(ride['map.polyline'], color = 'red').add_to(m)
-#     counter+=1
-
-# m.save('nfs_map.html')
 #############################################################################################
 
 # https://stackoverflow.com/questions/25146121/extracting-just-month-and-year-separately-from-pandas-datetime-column
@@ -181,13 +152,6 @@ print(time_updated_UTC)
 # fig0.update_yaxes(range = [0, 300])
 # fig0.update_layout(bargap = 0.8)
 
-# fig1 = px.box(
-#     activities_copy, x = "distance", 
-#     title="1. Boxplot: Distance by Activity Type", 
-#     color="sport_type", 
-#     points="all"
-# )
-
 # plot weekly mileage
 import plotly.express as px
 
@@ -195,7 +159,7 @@ fig0 = px.bar(
     df_marathon, x = "Training Week", y = "distance",
     labels = dict(Week_Of_Year ="Training Week", distance ="Distance (miles) "),
     #hover_data=["start_date_local"],
-    title = "CIM Weekly Mileage Log - Can you see which weeks I was injured?",
+    title = "CIM Weekly Mileage Log",
     width = 1000
 )
 # Hover over should be the day, not the first of the month
@@ -217,24 +181,18 @@ strava_layout = html.Div(
         html.H1("Using Strava's API to track CIM training!"),
         # Add the time last updated.
         html.H3("Last updated: " + time_updated_UTC.strftime("%B %d %Y at %H:%M UTC")),
-        # Show the total player count.
-        # html.H4("Total player count: " + f"{(len(ones_df['Rating'])):,}"),
-        # # html.H4("Total player count: " + str(len(ones_df['Rating']))),
-        # html.Div(
-        #     dcc.Graph(
-        #         figure=fig1,
-        #         style={"width": "1000px", "height": "700px", "margin": "auto"},
-        #     )
-        # ),
+
         html.Span(
             children=[
                 # html.H4("Bike rides with friends :)"),
                 html.Br(),
                 html.H4("A Python script sources data using the Strava API, and Render.com handles CI and deployment for free."),         
                 html.H4("Front end built using dash and plotly."),        
-                html.H4("More features are in the works..."),
                 html.Br(),
                 html.H4("Github repo: https://github.com/jimmyvluong/Strava_API_Fun")
+                <p> Fast forward to Spring 2023 and I signed up for a training group for the Shamrock Half Marathon. 
+                I had caught the running bug.
+                </p>
             ]
         ),        
         html.Div(
@@ -258,7 +216,7 @@ strava_layout = html.Div(
         ),
     ],
     style={
-        "text-align": "center",
+        "text-align": "left",
         "font-size": 24,
         # Update the background color to the entire app
         "background-color": "black",
